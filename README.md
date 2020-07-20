@@ -47,7 +47,7 @@ dynamodb_table = "mytable"
 }
 
 
-$config.json
+$vi config.json
 
 {
 
@@ -66,7 +66,7 @@ $config.json
 
 Step 4:
 
-terraform init .
+$terraform init .
 
 $terraform validate -var-file=config.json .
 
