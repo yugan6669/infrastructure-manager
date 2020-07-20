@@ -1,1 +1,73 @@
-# Infrastructure_Manager
+Project Title
+=====================
+Terraform is used to provision and manage IT Infrastructure
+
+Pre-Requisites
+============================
+$ sh hardening.sh reference: https://github.com/krishnamaram2/WebApp
+
+
+Execution Flow
+=====================
+
+step 1: clone repo
+
+$git clone https://github.com/krishnamaram2/Infrastructure_Manager.git
+
+
+
+Step 2: move to directory
+
+cd Infrastructure_Manager/src
+
+
+
+Step 3: enter access key and secret key in the below files 
+
+$vi backend.tf
+
+terraform{
+
+backend "s3"{
+
+access_key = ""
+
+secret_key = ""
+
+region = "us-east-1"
+
+bucket = "mybucket"
+
+key = "myfile"
+
+dynamodb_table = "mytable"
+
+}
+
+}
+
+
+$config.json
+
+{
+
+"myregion" : "us-east-1",
+
+"myaccesskey" : "",
+
+"mysecretkey" : "",
+
+"myamiid" : ""
+
+}
+
+
+
+
+Step 4:
+
+terraform init .
+
+$terraform validate -var-file=config.json .
+
+$terraform apply -var-file=config.json .
