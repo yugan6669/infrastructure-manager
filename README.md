@@ -10,10 +10,17 @@ $ sh hardening.sh reference: https://github.com/krishnamaram2/WebApp
 Execution Flow
 =====================
 
+step 0: create the below objects in AWS
+
+create s3 bucket
+
+create file under above s3 bucket
+
+create DynamoDB table
+
 step 1: clone repo
 
 $git clone https://github.com/krishnamaram2/Infrastructure_Manager.git
-
 
 
 Step 2: move to directory
@@ -36,11 +43,11 @@ secret_key = ""
 
 region = "us-east-1"
 
-bucket = "mybucket"
+bucket = "<mybucket>"
 
-key = "myfile"
+key = "<myfile>"
 
-dynamodb_table = "mytable"
+dynamodb_table = "<mytable>"
 
 }
 
@@ -60,8 +67,6 @@ $vi config.json
 "myamiid" : ""
 
 }
-
-
 
 
 Step 4:
