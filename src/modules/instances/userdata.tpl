@@ -18,6 +18,6 @@ Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="userdata.txt"
 
 #!/bin/bash
-/bin/echo "server_role = ${vm_role}" >> /home/centos/config/user_data.txt
+/bin/echo "server_role : ${vm_role}" >> /home/centos/config/meta_data.txt
 --//
 
