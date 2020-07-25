@@ -1,3 +1,6 @@
+https://aws.amazon.com/premiumsupport/knowledge-center/execute-user-data-ec2/
+
+
 step 1: Create DynamoDB table
 tablename: terraform-lock
 primarykey : LockID
