@@ -1,19 +1,19 @@
-terraform{
+#terraform{
 
-backend "s3"{
+#backend "s3"{
 
-access_key = ""
+#access_key = ""
 
-secret_key = ""
+#secret_key = ""
 
-region = "us-east-1"
+#region = "us-east-1"
 
-bucket = "<mybucket>"
+#bucket = "<mybucket>"
 
-key = "<myfile>"
+#key = "<myfile>"
 
-dynamodb_table = "<mytable>"
+#dynamodb_table = "<mytable>"
 
-}
+#}
 
-}
+#}
