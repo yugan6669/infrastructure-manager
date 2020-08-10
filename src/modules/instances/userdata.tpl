@@ -11,8 +11,14 @@ write_files:
       "server_role" : "web"
      }
              }
+             
+- path: /home/centos/testing.sh
+  permissions: '0755'
+  content: |
+     #!/bin/bash
+     touch /home/centos/testing.txt
 
-- path: /home/centos/ssh-keys.sh
+- path: /home/centos/ssh_keys.sh
   permissions: '0755'
   content: |
      #!/bin/bash
@@ -21,7 +27,8 @@ write_files:
      cat /home/centos/.ssh/id_rsa.pub >> /home/centos/.ssh/authorized_keys
 
      ssh -o StrictHostKeyChecking=no centos@localhost
-- path: /home/centos/bootstrapper.sh
+     
+- path: /home/centos/play-books.sh
   permissions: '0755'
   content: |
      #!/bin/bash
@@ -29,9 +36,12 @@ write_files:
 
      cd Configuration_Manager/src/plays
 
-     ansible-playbook -i hosts webapps.yml
+     ansible-playbook -i hosts webapp.yml
 
 
 runcmd:
- -  touch /home/centos/testing.sh
+ - touch /home/centos/test.h
+ - [ sh, /home/centos/testing.sh ]
+ - [ sh, /home/centos/ssh_keys.sh ]
+ - [ sh, /home/centos/play_books.sh ]
 
