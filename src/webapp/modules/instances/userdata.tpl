@@ -34,9 +34,9 @@ write_files:
      #!/bin/bash
      git clone https://github.com/krishnamaram2/Configuration_Manager.git
 
-     cd Configuration_Manager/src/plays
+     cd Configuration_Manager/src/webapp
 
-     ansible-playbook -i hosts webapp.yml
+     ansible-playbook -i hosts plays/webapp.yml
 
 
 runcmd:
