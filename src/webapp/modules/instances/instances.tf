@@ -15,7 +15,7 @@ data "template_file" "webserver-userdata" {
 ################################################  web server #######################################
 resource "aws_instance" "webserver" {
 ami = "${var.myamiid}"
-instance_type = "t2.micro"
+instance_type = "t2.medium"
 subnet_id = "${aws_subnet.publicsubnet.id}"
 vpc_security_group_ids = ["${aws_security_group.websg.id}"]
 key_name = "virginia"
