@@ -32,9 +32,9 @@ write_files:
   permissions: '0755'
   content: |
      #!/bin/bash
-     git clone https://github.com/krishnamaram2/Configuration_Manager.git
+     git clone https://github.com/krishnamaram2/configuration-manager.git
 
-     cd Configuration_Manager/src/plays
+     cd configuration-manager/src/plays
 
      ansible-playbook -i hosts webapp.yml
 
